@@ -16,7 +16,7 @@ const sodlier = {
     if (this.weapon.ammo !== 0) {
       this.weapon.ammo = 30;
       this.clip--;
-      console.log(`${this.weapon.name}: PEW PEW`);
+      console.log(`Пистолет: ${this.weapon.name}: PEW PEW`);
     } else if (this.weapon.ammo === 0) {
       console.log(`${this.name}: кончились патроны`);
     }
@@ -30,9 +30,9 @@ const sodlier = {
     if (this.weapon.ammo !== 0) {
       this.weapon.ammo = 30;
       this.clip--;
-      console.log(`${this.name}: перезаряжаюсь`);
+      console.log(`Имя: ${this.name}: перезаряжаюсь`);
     } else if (this.clip === 0) {
-      console.log(`Имя ${this.name}: кончились магазины`);
+      console.log(`Имя: ${this.name}: кончились магазины`);
     }
   },
   //______________________________________________________
@@ -43,9 +43,9 @@ const sodlier = {
   gotHit: function () {
     if (this.hp === 10) {
       this.hp--;
-      console.log(`Имя ${this.name}: я ранен`);
+      console.log(`Имя: ${this.name}: я ранен`);
     } else if (this.hp === 0) {
-      console.log(`Имя ${this.name}: умер`);
+      console.log(`Имя: ${this.name}: умер`);
     }
   },
 
@@ -55,7 +55,7 @@ const sodlier = {
   medkit: function () {
     if (this.hp !== 10) {
       this.hp++;
-      console.log(`${this.name}: лечюсь`);
+      console.log(`Имя: ${this.name}: лечюсь`);
     }
   },
 
@@ -65,7 +65,7 @@ const sodlier = {
   smoke: function () {
     if (this.hp > 0) {
       this.hp--;
-      console.log(`${this.name}: курит сигару`);
+      console.log(`Имя: ${this.name}: курит сигару`);
     }
   },
 };
